@@ -1,6 +1,6 @@
 export const getAPerson = async () => {
     
-    let response = await fetch('https://swapi.dev/api/people/1')
+    let response = await fetch('https://swapi.dev/api/people/?results=5/')
     
     return response.json()
 

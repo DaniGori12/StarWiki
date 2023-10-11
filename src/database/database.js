@@ -1,5 +1,6 @@
 export const database = {
   
     username: "admin",
-    password: "admin"
+    password: "admin",
+    name: "Anakin"
   }

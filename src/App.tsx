@@ -17,14 +17,14 @@ function App() {
   return (
     <BrowserRouter basename='/'>
       <ChakraProvider>
-        <Flex>
-          <Link
+        <Flex gap="10px">
+          <Link fontWeight="bold"
             as={RouterLink}
             to="/login"
           >
             Login
           </Link>
-          <Link
+          <Link fontWeight="bold" 
             as={RouterLink}
             to="/home"
           >
@@ -63,16 +63,16 @@ function App() {
           <Route element={<Protected auth={auth} />} >
               <Route path='home/*' element={<Home />} />
           </Route>
-          <Route element={<Protected auth={!auth} />} >
+          <Route >
               <Route path='starships/*' element={<Ships />} />
           </Route>
-          <Route element={<Protected auth={!auth} />} >
+          <Route  >
               <Route path='characters/*' element={<Characters />} />
           </Route>
-          <Route element={<Protected auth={!auth} />} >
+          <Route  >
               <Route path='planets/*' element={<Planets />} />
           </Route>
-          <Route element={<Protected auth={!auth} />} >
+          <Route  >
               <Route path='films/*' element={<Films />} />
           </Route>
 
