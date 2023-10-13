@@ -9,7 +9,7 @@ export const getAPerson = async () => {
 
 export const getAPlanet = async () => {
     
-    let response = await fetch('https://swapi.dev/api/planets/1')
+    let response = await fetch('https://swapi.dev/api/planets/?results=5/')
     
     return response.json()
 
@@ -17,7 +17,7 @@ export const getAPlanet = async () => {
 }
 export const getAStarship = async () => {
     
-    let response = await fetch('https://swapi.dev/api/starships/12')
+    let response = await fetch('https://swapi.dev/api/starships/?results=5/')
     
     return response.json()
 
@@ -25,7 +25,7 @@ export const getAStarship = async () => {
 }
 export const getAFilm = async () => {
     
-    let response = await fetch('https://swapi.dev/api/films/1')
+    let response = await fetch('https://swapi.dev/api/films/?results=5/')
     
     return response.json()
 
