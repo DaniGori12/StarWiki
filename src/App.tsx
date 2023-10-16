@@ -20,72 +20,64 @@ function App() {
     <BrowserRouter basename='/'>
       <ChakraProvider >
 
-{!auth ? 
-        <Flex gap="10px">
-          <Link fontWeight="bold"
-            as={RouterLink}
-            to="/login"
-          >
-            Login
-          </Link>
-          <Link fontWeight="bold"
-            as={RouterLink}
-            to="/home"
-          >
-            Home
-          </Link>
+        {!auth ?
+          <Flex gap="10px">
+            <Link fontWeight="bold"
+              as={RouterLink}
+              to="/login"
+            >
+              Login
+            </Link>
+            <Link fontWeight="bold"
+              as={RouterLink}
+              to="/home"
+            >
+              Home
+            </Link>
           </Flex>
-:
 
+          :
 
-        <Flex gap="10px">
-          <Link fontWeight="bold"
-            as={RouterLink}
-            to="/login"
-          >
-            Login
-          </Link>
-          <Link fontWeight="bold"
-            as={RouterLink}
-            to="/home"
-          >
-            Home
-          </Link>
-          <Link
-            as={RouterLink}
-            to="/starships"
-          >
-            Starships
-          </Link>
-          <Link
-            as={RouterLink}
-            to="/characters"
-          >
-            Characters
-          </Link>
-          <Link
-            as={RouterLink}
-            to="/planets"
-          >
-            Planets
-          </Link>
-          <Link
-            as={RouterLink}
-            to="/films"
-          >
-            Films
-          </Link>
+          <Flex gap="10px">
+            <Link fontWeight="bold"
+              as={RouterLink}
+              to="/login"
+            >
+              Logout
+            </Link>
+            <Link fontWeight="bold"
+              as={RouterLink}
+              to="/home"
+            >
+              Home
+            </Link>
+            <Link
+              as={RouterLink}
+              to="/starships"
+            >
+              Starships
+            </Link>
+            <Link
+              as={RouterLink}
+              to="/characters"
+            >
+              Characters
+            </Link>
+            <Link
+              as={RouterLink}
+              to="/planets"
+            >
+              Planets
+            </Link>
+            <Link
+              as={RouterLink}
+              to="/films"
+            >
+              Films
+            </Link>
 
-        </Flex>
-}
-
-
-
-
-
-
-
-
+          </Flex>
+        }
 
 
         <Routes>
@@ -108,10 +100,6 @@ function App() {
           </Route>
 
         </Routes>
-
-
-
-
 
       </ChakraProvider>
     </BrowserRouter>
