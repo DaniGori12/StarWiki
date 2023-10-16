@@ -4,7 +4,7 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import {AxiosResponse} from "axios"
 import { Box, Heading } from "@chakra-ui/react";
-
+import "primereact/resources/themes/lara-light-indigo/theme.css";
 
 
 export default function Characters() {
@@ -25,7 +25,7 @@ useEffect(() => {
     <Box>
       <Heading mt="5" mb="5">Personajes</Heading>
      
-      <DataTable value={person} loading={loading} tableStyle={{ minWidth: '50rem' }}  >
+      <DataTable value={person} loading={loading} stripedRows tableStyle={{ minWidth: '50rem' }}  >
 
         <Column field="name" header="Nombre" sortable style={{ width: '25%' }}></Column>
         <Column field="gender" header="Género" sortable style={{ width: '25%' }}></Column>
