@@ -28,3 +28,11 @@ tr {
   overflow: hidden
 }
 
+.p-sortable-column {
+  background-color: white;
+}
+
+.p-datatable-footer {
+  background-color: white;
+  display: flex;
+}
