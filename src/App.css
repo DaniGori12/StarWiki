@@ -1,17 +1,30 @@
 #root {
   max-width: 1180px;
   margin: 0 auto;
-  
-  
 }
 
-
-.Main {
-  margin: 30px 0px 30px 0px;
-}
 
 .p-datatable-loading-overlay {
-  margin-top: 60px;
+  background-color: white;
+}
 
+.p-datatable-tbody :hover {
+  background-color:#f5f4dc;
+  cursor: pointer;
+  
+  
+}
+
+tr {
+  border-bottom: 1px solid;
+  border-color: rgba(128, 128, 128, 0.23);
+}
+
+
+.p-datatable{
+  border: 1px solid ; 
+  border-radius: 20px;
+  border-color: rgba(128, 128, 128, 0.373);
+  overflow: hidden
 }
 
