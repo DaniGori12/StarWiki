@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import {AxiosResponse} from "axios"
+import { Box, Heading } from "@chakra-ui/react";
 
 export default function Starships() {
   
@@ -20,14 +21,14 @@ export default function Starships() {
 
 
   return (
-    <div>
-    <h1>Naves</h1>
-    <DataTable value={starship} stripedRows loading={loading} tableStyle={{ minWidth: '50rem' }} >
+    <Box>
+    <Heading mt="5" mb="5">Naves</Heading>
+    <DataTable value={starship}  loading={loading} tableStyle={{ minWidth: '50rem' }} >
       <Column field="name" header="Nombre" sortable style={{ width: '25%' }}></Column>
       <Column field="model" header="Modelo" sortable style={{ width: '25%' }}></Column>
       <Column field="starship_class" header="Clase" sortable style={{ width: '25%' }}></Column>
       <Column field="manufacturer" header="Fabricante" sortable style={{ width: '25%' }}></Column>
     </DataTable>
-  </div>
+  </Box>
   )
 }

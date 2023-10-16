@@ -9,6 +9,8 @@ import Ships from "../src/pages/wiki/starships.js"
 import Characters from "../src/pages/wiki/characters.js"
 import Films from "../src/pages/wiki/films.js"
 import Planets from "../src/pages/wiki/planets.js"
+
+
 function App() {
 
   const [auth, setAuth] = useState(false)
@@ -16,7 +18,7 @@ function App() {
 
   return (
     <BrowserRouter basename='/'>
-      <ChakraProvider>
+      <ChakraProvider >
         <Flex gap="10px">
           <Link fontWeight="bold"
             as={RouterLink}

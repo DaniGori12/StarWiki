@@ -3,6 +3,7 @@ import { getData } from "../../services/fetchService";
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import {AxiosResponse} from "axios"
+import { Box, Heading } from "@chakra-ui/react";
 
 useState
 export default function Planets() {
@@ -26,13 +27,13 @@ const [loading, setLoading] = useState(true)
 
 
   return (
-    <div>
-      <h1>Planetas</h1>
-      <DataTable value={planet} stripedRows loading={loading} tableStyle={{ minWidth: '50rem' }} >
+    <Box>
+      <Heading mt="5" mb="5">Planetas</Heading>
+      <DataTable value={planet}  loading={loading} tableStyle={{ minWidth: '50rem' }} >
         <Column field="name" header="Nombre" sortable style={{ width: '25%' }}></Column>
         <Column field="climate" header="Clima" sortable style={{ width: '25%' }}></Column>
         <Column field="population" header="Población" sortable style={{ width: '25%' }}></Column>
       </DataTable>
-    </div>
+    </Box>
   )
 }

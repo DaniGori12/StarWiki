@@ -1,4 +1,4 @@
-import { FormControl, FormLabel, Input, useToast, Box, Button, Stack, Container } from "@chakra-ui/react"
+import { FormControl, FormLabel, Input, useToast, Box, Button, Stack, Container, Card, Heading } from "@chakra-ui/react"
 import { database } from "../database/database"
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
@@ -26,7 +26,7 @@ export const LoginPage = ({ setAuth }: Props) => {
             title: "Credentials",
             description: "Username: "+ user + " Password: "+ pass,
             status: "info",
-            duration: 10000000000000,
+            duration: 5000,
             position: "top-right",
             isClosable: true
         }), []; 
@@ -65,23 +65,24 @@ export const LoginPage = ({ setAuth }: Props) => {
   }
 
   return (
-    <Container>
-      <Stack>
-        <Box>
-
-          <FormControl>
-
+    <Container >
+      <Stack mt='10' spacing='23'>
+    
+<Heading >Log in to your account</Heading>
+<Card p="5">
+          <FormControl isRequired >
             <FormLabel htmlFor="user">Username</FormLabel>
-            <Input id="TextedUser" type="Username " onChange={(e) => setTextedUser(e.target.value)} />
+            <Input id="TextedUser" type="Username" placeholder="admin@admin.com" onChange={(e) => setTextedUser(e.target.value)} />
 
 
-            <FormLabel htmlFor="pass">Password</FormLabel>
-            <Input id="Textedpass" type="password" onChange={(e) => setTextedPass(e.target.value)} />
+            <FormLabel htmlFor="pass" mt="5">Password</FormLabel >
+            <Input id="Textedpass" type="password" placeholder="Your password" onChange={(e) => setTextedPass(e.target.value)} />
             <Box display='flex' justifyContent='right'>
               <Button mt="10px" type="submit" onClick={handleSubmit}>Submit</Button>
             </Box>
           </FormControl>
-        </Box>
+</Card>
+   
       </Stack>
 
     </Container>

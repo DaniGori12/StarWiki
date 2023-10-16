@@ -1,21 +1,17 @@
 #root {
-  max-width: 1280px;
+  max-width: 1180px;
   margin: 0 auto;
+  
+  
 }
+
 
 .Main {
   margin: 30px 0px 30px 0px;
-}
-
-h1 {
-  margin: 30px 0px 30px 0px;
-  font-weight: bold;
-  font-size: 3.0em;
-  line-height: 1.1;
-  text-decoration: underline;
 }
 
 .p-datatable-loading-overlay {
   margin-top: 60px;
 
 }
+
