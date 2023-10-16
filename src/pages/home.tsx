@@ -9,7 +9,7 @@ export default function Home() {
     <div>
 <h1 className="Main">Star Wars Wiki</h1>
 
-    <h4>Hola {database.name}!</h4>
+    <h2>Hola {database.name}! Bienvenid@ a la Wiki de Star Wars</h2>
     </div>
   )
 }

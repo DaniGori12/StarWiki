@@ -63,16 +63,16 @@ function App() {
           <Route element={<Protected auth={auth} />} >
               <Route path='home/*' element={<Home />} />
           </Route>
-          <Route >
+          <Route element={<Protected auth={auth} />}>
               <Route path='starships/*' element={<Ships />} />
           </Route>
-          <Route  >
+          <Route  element={<Protected auth={auth} />}>
               <Route path='characters/*' element={<Characters />} />
           </Route>
-          <Route  >
+          <Route  element={<Protected auth={auth} />}>
               <Route path='planets/*' element={<Planets />} />
           </Route>
-          <Route  >
+          <Route  element={<Protected auth={auth} />}>
               <Route path='films/*' element={<Films />} />
           </Route>
 
