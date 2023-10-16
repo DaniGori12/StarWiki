@@ -10,27 +10,33 @@ export default function Films() {
 
   const [film, setFilm] = useState<{ title: string, episode_id: number, director: string, release_date: number }[]>([])
   const [loading, setLoading] = useState(true)
+
   // const GetData = async () => {
   //   try {
   //     const data = await getAFilm();
   //     console.log(data.results)
 
-
+  
   //     const finalData = data.results;
   //     setFilm(finalData);
-
+  
   //   } catch (error) {
-  //     console.error("Fetching data:", error);
-  //   }
+    //     console.error("Fetching data:", error);
+    //   }
+    
+    // }
+    
+    useEffect(() => {
+      try {
+        getData("films") 
+        .then((response: AxiosResponse) => {
+          setFilm(response.data.results)
+          setLoading(false)
+        })
 
-  // }
-
-  useEffect(() => {
-    getData("films")
-    .then((response: AxiosResponse) => {
-      setFilm(response.data.results)
-      setLoading(false)
-      })
+      } catch (error) {
+        console.log("Hay un error", error )
+      }
 
   }, [])
 

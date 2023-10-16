@@ -72,11 +72,11 @@ export const LoginPage = ({ setAuth }: Props) => {
 <Card p="5">
           <FormControl isRequired >
             <FormLabel htmlFor="user">Username</FormLabel>
-            <Input id="TextedUser" type="Username" placeholder="admin@admin.com" onChange={(e) => setTextedUser(e.target.value)} />
+            <Input id="user" type="Username" placeholder="admin@admin.com" onChange={(e) => setTextedUser(e.target.value)} />
 
 
             <FormLabel htmlFor="pass" mt="5">Password</FormLabel >
-            <Input id="Textedpass" type="password" placeholder="Your password" onChange={(e) => setTextedPass(e.target.value)} />
+            <Input id=" pass" type="password" placeholder="Your password" onChange={(e) => setTextedPass(e.target.value)} />
             <Box display='flex' justifyContent='right'>
               <Button mt="10px" type="submit" onClick={handleSubmit}>Submit</Button>
             </Box>

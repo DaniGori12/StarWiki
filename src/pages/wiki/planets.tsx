@@ -13,10 +13,15 @@ export default function Planets() {
 const [loading, setLoading] = useState(true)
 
   useEffect(() => { 
-    getData("planets")
-    .then((response: AxiosResponse) => {
-    setPlanet(response.data.results)
-    setLoading(false)})
+
+    try {
+      getData("planets")
+      .then((response: AxiosResponse) => {
+      setPlanet(response.data.results)
+      setLoading(false)})
+    } catch (error) {
+      console.log("Hay un error", error)
+    }
 
   }, [])
 

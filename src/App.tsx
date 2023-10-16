@@ -19,6 +19,8 @@ function App() {
   return (
     <BrowserRouter basename='/'>
       <ChakraProvider >
+
+{!auth ? 
         <Flex gap="10px">
           <Link fontWeight="bold"
             as={RouterLink}
@@ -26,7 +28,24 @@ function App() {
           >
             Login
           </Link>
-          <Link fontWeight="bold" 
+          <Link fontWeight="bold"
+            as={RouterLink}
+            to="/home"
+          >
+            Home
+          </Link>
+          </Flex>
+:
+
+
+        <Flex gap="10px">
+          <Link fontWeight="bold"
+            as={RouterLink}
+            to="/login"
+          >
+            Login
+          </Link>
+          <Link fontWeight="bold"
             as={RouterLink}
             to="/home"
           >
@@ -58,27 +77,41 @@ function App() {
           </Link>
 
         </Flex>
+}
+
+
+
+
+
+
+
+
+
 
         <Routes>
-          <Route path='login/*' element={<LoginPage setAuth={setAuth}/>} />
+          <Route path='login/*' element={<LoginPage setAuth={setAuth} />} />
 
           <Route element={<Protected auth={auth} />} >
-              <Route path='home/*' element={<Home />} />
+            <Route path='home/*' element={<Home />} />
           </Route>
           <Route element={<Protected auth={auth} />}>
-              <Route path='starships/*' element={<Ships />} />
+            <Route path='starships/*' element={<Ships />} />
           </Route>
-          <Route  element={<Protected auth={auth} />}>
-              <Route path='characters/*' element={<Characters />} />
+          <Route element={<Protected auth={auth} />}>
+            <Route path='characters/*' element={<Characters />} />
           </Route>
-          <Route  element={<Protected auth={auth} />}>
-              <Route path='planets/*' element={<Planets />} />
+          <Route element={<Protected auth={auth} />}>
+            <Route path='planets/*' element={<Planets />} />
           </Route>
-          <Route  element={<Protected auth={auth} />}>
-              <Route path='films/*' element={<Films />} />
+          <Route element={<Protected auth={auth} />}>
+            <Route path='films/*' element={<Films />} />
           </Route>
 
         </Routes>
+
+
+
+
 
       </ChakraProvider>
     </BrowserRouter>

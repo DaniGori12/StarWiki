@@ -12,11 +12,14 @@ export default function Starships() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => { 
-    getData("starships")
-    .then((response: AxiosResponse) => {
+    try {
+      getData("starships")
+      .then((response: AxiosResponse) => {
       setStarship(response.data.results)
-    setLoading(false)})
-
+      setLoading(false)})
+    } catch (error) {
+      console.log("Hay un error", error)
+    }
   }, [])
 
 

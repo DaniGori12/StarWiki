@@ -14,9 +14,13 @@ export default function Characters() {
   const [loading, setLoading] = useState(true)
 
 useEffect(() => { 
-  getData("people")
-  .then((response: AxiosResponse) => {setPerson(response.data.results)
-  setLoading(false)})
+  try {
+    getData("people")
+    .then((response: AxiosResponse) => {setPerson(response.data.results)
+    setLoading(false)})
+  } catch (error){
+    console.log("Hay un error", error)
+  }
 
 }, [])
 
